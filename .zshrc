@@ -3,6 +3,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 alias claer="clear"
+alias cls="clear"
 alias svba="source .venv/bin/activate"
 alias pm="python manage.py"
 alias pmr="pm runserver"
