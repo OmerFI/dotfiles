@@ -1,16 +1,16 @@
-alias claer="clear"
-alias cls="clear"
-alias svba="source .venv/bin/activate.fish"
-alias pm="python manage.py"
-alias pmr="pm runserver"
-alias pms="pm shell"
-alias pmma="pm makemigrations"
-alias pmmi="pm migrate"
-alias xclip="xclip -selection clipboard"
+abbr -a claer "clear"
+abbr -a cls "clear"
+abbr -a svba "source .venv/bin/activate.fish"
+abbr -a pm "python manage.py"
+abbr -a pmr "python manage.py runserver"
+abbr -a pms "python manage.py shell"
+abbr -a pmma "python manage.py makemigrations"
+abbr -a pmmi "python manage.py migrate"
+abbr -a xclip "xclip -selection clipboard"
 
-alias vi nvim
+abbr -a vi "nvim"
 
-alias l "ls -lah"
+abbr -a l "ls -lah"
+abbr -a e "eza -lah"
 
-alias ipy ipython
-
+abbr -a ipy "ipython"
