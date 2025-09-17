@@ -1,0 +1,17 @@
+[
+    // Add following to VsCode / Cursor Keyboard Shortcuts (keybindings.json)
+    {
+        "key": "ctrl+b",
+        "command": "python.execInTerminal-icon"
+    },
+    // https://stackoverflow.com/a/38978993/14892434
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
+    // ...
+]
