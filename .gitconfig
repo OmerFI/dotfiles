@@ -1,0 +1,9 @@
+[user]
+	name = Ömer Furkan İşleyen
+	email = 54645034+OmerFI@users.noreply.github.com
+[alias]
+	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+[init]
+	defaultBranch = main
+[rebase]
+	autoStash = true
