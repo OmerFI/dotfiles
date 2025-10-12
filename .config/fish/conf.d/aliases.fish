@@ -14,3 +14,6 @@ abbr -a l "ls -lah"
 abbr -a e "eza -lah"
 
 abbr -a ipy "ipython"
+
+# Sublime Text. Should be added to Windows Path manually, ref: https://www.sublimetext.com/docs/command_line.html
+abbr -a subl "subl.exe"
