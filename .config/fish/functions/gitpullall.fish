@@ -6,6 +6,7 @@ function gitpullall --description "Run git pull in every git repository under ho
     for d in $exclude_dirs
         set find_args $find_args -not -path "*/$d/*"
     end
+    set find_args $find_args -not -path "*/\.*/*"
 
     set -l repos (find $search_root $find_args 2>/dev/null | sed 's|/.git$||' | sort)
 
