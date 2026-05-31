@@ -2,6 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Signal truecolor only when the outer terminal is Windows Terminal (which
+# supports it). tmux strips COLORTERM from its update-environment list, so it
+# never reaches the shell otherwise. The real RGB capability is set in tmux.conf.
+if set -q WT_SESSION
+    set -gx COLORTERM truecolor
+end
+
 # run fish_key_reader to find keys
 bind \b backward-kill-word
 bind \e\[3\;5~ kill-word
