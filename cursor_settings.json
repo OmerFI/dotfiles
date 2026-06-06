@@ -1,9 +1,14 @@
 {
     // Cursor User Settings (settings.json) — archived, no longer in active use
     //
-    // Note: workbench.activityBar.orientation is a Cursor-specific setting
-    // (Cursor defaults to a horizontal activity bar; "vertical" restores
-    // the classic VS Code layout). It does not exist in upstream VS Code.
+    // Note: some Cursor defaults differ from upstream VS Code (verified against
+    // the Cursor 3.5.33 bundle), so these seemingly-default values are meaningful:
+    // - editor.minimap.enabled: Cursor default is false (VS Code: true)
+    // - window.commandCenter: Cursor default is false (VS Code: true)
+    // - workbench.activityBar.orientation: Cursor-specific setting, default
+    //   "horizontal"; does not exist in upstream VS Code
+    "window.commandCenter": true,
+    "editor.minimap.enabled": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GitHub Dark",
     "workbench.activityBar.orientation": "vertical",
