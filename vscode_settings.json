@@ -9,11 +9,8 @@
     "github.copilot.chat.claudeAgent.enabled": false,
     "github.copilot.chat.cli.showExternalSessions": false,
     "chat.viewSessions.enabled": false,
-    "window.commandCenter": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GitHub Dark",
-    "workbench.activityBar.orientation": "vertical",
-    "editor.minimap.enabled": true,
     "files.autoSave": "afterDelay",
     "[python]": {
         "editor.formatOnSave": true,
@@ -98,11 +95,8 @@
         "editor.indentSize": 4,
         "editor.insertSpaces": true
     },
-    "claudeCode.preferredLocation": "panel",
-    "window.autoDetectColorScheme": false,
     "gitlens.ai.model": "vscode",
     "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-    "settingsSync.ignoredExtensions": [],
     "gitlens.launchpad.indicator.enabled": false,
     "remote.autoForwardPortsSource": "hybrid",
     "security.workspace.trust.untrustedFiles": "open"
