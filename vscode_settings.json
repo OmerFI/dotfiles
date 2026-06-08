@@ -1,14 +1,5 @@
 {
     // VsCode User Settings (settings.json)
-    //
-    // Workaround: built-in Copilot Chat's CLI/Claude "agent sessions" integration
-    // freezes the whole extension host for 60-430s at startup on WSL
-    // (first listSessions call blocks the event loop while loading its SDK).
-    // Does NOT affect Copilot inline completions.
-    // Upstream: https://github.com/microsoft/vscode/issues/319710
-    "github.copilot.chat.claudeAgent.enabled": false,
-    "github.copilot.chat.cli.showExternalSessions": false,
-    "chat.viewSessions.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "GitHub Dark",
     "files.autoSave": "afterDelay",
