@@ -40,6 +40,14 @@ Install [eza](https://github.com/eza-community/eza/blob/main/INSTALL.md), [bat](
 
 Install [fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation), after updating [fish_plugins](https://github.com/OmerFI/dotfiles/blob/main/.config/fish/fish_plugins) file, run `fisher update`
 
+## Neovim (LazyVim)
+
+`.config/nvim` [LazyVim](https://www.lazyvim.org/) tabanlı. Yeni makinede:
+
+- Neovim, git, bir C derleyici (`build-essential` / clang), `ripgrep` ve `fd` kurulu olsun (yukarıdaki adımlarda var).
+- Bir [Nerd Font](https://www.nerdfonts.com/) kur ve terminalin fontunu o yap — yoksa ikonlar kutu görünür. macOS: `brew install --cask font-jetbrains-mono-nerd-font`.
+- `.config/nvim` yerine konduktan sonra ilk `nvim` açılışında plugin'ler otomatik kurulur; `lazy-lock.json` sürümleri sabitler.
+
 ## Bilinen Sorun: VS Code WSL açılış donması
 
 VS Code (WSL remote) açılırken eklentiler **aralıklı olarak 60-180 sn donabiliyor** —
