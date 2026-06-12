@@ -15,5 +15,10 @@ abbr -a e "eza -lah"
 
 abbr -a ipy "ipython"
 
-# Sublime Text. Should be added to Windows Path manually, ref: https://www.sublimetext.com/docs/command_line.html
-abbr -a subl "subl.exe"
+# Sublime Text, ref: https://www.sublimetext.com/docs/command_line.html
+if test (uname) = Darwin
+    abbr -a subl "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+else
+    # WSL: subl.exe should be added to Windows PATH manually
+    abbr -a subl "subl.exe"
+end
