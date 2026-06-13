@@ -8,6 +8,19 @@ return {
     opts = {
       servers = {
         ruff = { mason = false },
+        -- uv projeleri hep kökte .venv tutar; pyright'a onu otomatik tanıt
+        -- (yoksa sistem python'ına bakar ve django/ninja gibi importlar çözülmez).
+        pyright = {
+          before_init = function(params, config)
+            local root = config.root_dir or params.rootPath or vim.fn.getcwd()
+            local py = root and (root .. "/.venv/bin/python")
+            if py and vim.uv.fs_stat(py) then
+              config.settings = vim.tbl_deep_extend("force", config.settings or {}, {
+                python = { pythonPath = py },
+              })
+            end
+          end,
+        },
       },
     },
   },
