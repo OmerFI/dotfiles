@@ -50,4 +50,7 @@ Install [fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#insta
 
 ## Firefox
 
-`firefox/ublock-my-filters.txt` — uBlock Origin → Dashboard → "My filters" (Kendi filtrelerim) sekmesine eklenecek özel kurallar. Şu an Unity Asset Store'un bozuk Service Worker'ını engelleyen bir kural içeriyor (neden + detay dosyanın başındaki yorumlarda).
+`firefox/` — Firefox'a özgü düzeltmeler. Detaylar `firefox/README.md`'de:
+
+- **`intl.accept_languages` bozukluğu** → Xbox / Microsoft girişini kıran 500 (Sync kaynaklı).
+- **Unity Asset Store** bozuk Service Worker → `firefox/ublock-my-filters.txt` (uBlock "My filters").
