@@ -15,7 +15,8 @@ olarak gidiyor → XSTS ayrıştıramayıp 500 dönüyor. Bilinen bir **Firefox 
 bug'ı: Sync, yerelleştirilmiş pref'i yanlış metotla okuyup (`getComplexValue`)
 literal pointer'ı tüm senkron cihazlara yayıyor. Bu yüzden profil sıfırlama /
 Refresh işe yaramaz — Sync geri yükler.
-Bugzilla: 654099, 438031, 652934.
+Bildirildi: [Bugzilla bug 2049174](https://bugzilla.mozilla.org/show_bug.cgi?id=2049174)
+(ilgili eski kayıtlar: 654099, 438031, 652934).
 
 **Çözüm:** `about:config` → `intl.accept_languages` değerini şu yap:
 
