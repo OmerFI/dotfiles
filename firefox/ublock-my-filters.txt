@@ -1,0 +1,12 @@
+! uBlock Origin → Dashboard → "My filters" (Kendi filtrelerim) sekmesine yapıştır.
+!
+! ── Unity Asset Store: bozuk Service Worker ──────────────────────────────────
+! Sitenin kendi Service Worker'ı (workbox / sw-main.js) Firefox'ta, Unity'nin
+! Google CDN'indeki cross-site scriptleri (moment.min.js, numbro.min.js) CORS +
+! NetworkError ile getiremiyor. Sonuç: sayfa yarım render oluyor (satın-alma
+! butonu "|||", video gelmiyor) ve yalnızca Ctrl+Shift+R düzeltiyor (sert
+! yenileme SW'yi baypas ettiği için). Chrome'da sorun yok — Firefox'a özgü bir
+! Unity hatası. Aşağıdaki kural sadece bu SW'nin kaydolmasını engeller; SW
+! diğer tüm sitelerde açık kalır, Unity de her zaman doğru yüklenir.
+! (Alternatif balyoz çözüm: about:config dom.serviceWorkers.enabled = false)
+||assetstore.unity.com/public/assets/as/sw-main.js

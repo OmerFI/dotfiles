@@ -47,3 +47,7 @@ Install [fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#insta
 - Neovim, git, bir C derleyici (`build-essential` / clang), `ripgrep` ve `fd` kurulu olsun (yukarıdaki adımlarda var).
 - Bir [Nerd Font](https://www.nerdfonts.com/) kur ve terminalin fontunu o yap — yoksa ikonlar kutu görünür. macOS: `brew install --cask font-jetbrains-mono-nerd-font`.
 - `.config/nvim` yerine konduktan sonra ilk `nvim` açılışında plugin'ler otomatik kurulur; `lazy-lock.json` sürümleri sabitler.
+
+## Firefox
+
+`firefox/ublock-my-filters.txt` — uBlock Origin → Dashboard → "My filters" (Kendi filtrelerim) sekmesine eklenecek özel kurallar. Şu an Unity Asset Store'un bozuk Service Worker'ını engelleyen bir kural içeriyor (neden + detay dosyanın başındaki yorumlarda).
