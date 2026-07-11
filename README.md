@@ -24,6 +24,12 @@ Install [starship](https://starship.rs/guide/)
 
 Install [wslu](https://wslutiliti.es/wslu/install.html)
 
+wslu tarayıcıyı `wslview` ile açar ama `xdg-open` adında bir komut kurmaz. rclone gibi bazı araçlar tarayıcıyı açarken doğrudan `xdg-open`'ı çalıştırdığından, `xdg-open`'ı `wslview`'a bağlayan bir symlink oluştur (wslu Mart 2025'te arşivlendi ama `wslview` çalışmaya devam ediyor):
+
+```bash
+mkdir -p ~/.local/bin && ln -sf "$(command -v wslview)" ~/.local/bin/xdg-open
+```
+
 Install [GitHub CLI](https://github.com/cli/cli#installation) and login with `gh auth login`, choose Github.com and SSH and do not upload ssh key (skip)
 
 ```bash
@@ -39,6 +45,12 @@ Install [uv](https://docs.astral.sh/uv/#getting-started) and install python 3.10
 Install [eza](https://github.com/eza-community/eza/blob/main/INSTALL.md), [bat](https://github.com/sharkdp/bat/tree/master?tab=readme-ov-file#installation), [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#installation), [xcp](https://github.com/tarka/xcp?tab=readme-ov-file#installation), [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 
 Install [fisher](https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation), after updating [fish_plugins](https://github.com/OmerFI/dotfiles/blob/main/.config/fish/fish_plugins) file, run `fisher update`
+
+### Opsiyonel
+
+Kritik değil, ihtiyaç oldukça kurulabilir:
+
+- [rclone](https://rclone.org/install/) — bulut depolama servisleriyle dosya senkronizasyonu için.
 
 ## Neovim (LazyVim)
 
