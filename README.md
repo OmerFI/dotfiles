@@ -66,3 +66,9 @@ Kritik değil, ihtiyaç oldukça kurulabilir:
 
 - **`intl.accept_languages` bozukluğu** → Xbox / Microsoft girişini kıran 500 (Sync kaynaklı).
 - **Unity Asset Store** bozuk Service Worker → `firefox/ublock-my-filters.txt` (uBlock "My filters").
+
+## macOS
+
+`macos/` — macOS'a özgü, opsiyonel düzeltmeler. Detaylar `macos/README.md`'de:
+
+- **Uzantısız metin dosyaları çift tıklayınca TextEdit'te açılıyor** → dosyaya `'TEXT'` tip kodu damgalayıp Zed'e yönlendirme (`set-zed-as-text-editor.swift` + `zed-mark.py`).
