@@ -13,6 +13,7 @@ abbr -a vi "nvim"
 abbr -a l "ls -lah"
 abbr -a e "eza -lah"
 
+abbr -a py "python"
 abbr -a ipy "ipython"
 
 # Sublime Text, ref: https://www.sublimetext.com/docs/command_line.html
