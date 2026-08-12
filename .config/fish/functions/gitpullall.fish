@@ -17,7 +17,11 @@ function gitpullall --description "Run git pull in every git repository under ho
 
     for repo in $repos
         set -l name (string replace $HOME "~" $repo)
-        echo (set_color --bold cyan)"=== $name ==="(set_color normal)
+        set -l branch (git -C $repo branch --show-current)
+        if test -z "$branch"
+            set branch "detached @ "(git -C $repo rev-parse --short HEAD 2>/dev/null)
+        end
+        echo (set_color --bold cyan)"=== $name"(set_color normal)" ("(set_color --bold yellow)$branch(set_color normal)")"(set_color --bold cyan)" ==="(set_color normal)
         set -l output (git -C $repo pull 2>&1)
         set -l status_code $status
         if test $status_code -ne 0
