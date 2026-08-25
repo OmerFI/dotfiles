@@ -1,0 +1,6 @@
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 13
+font-style = Medium
+
+# Satır aralığını açar — yoğun terminal çıktısında okunabilirliği en çok artıran ayar.
+adjust-cell-height = 10%
