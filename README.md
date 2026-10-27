@@ -60,6 +60,31 @@ Kritik değil, ihtiyaç oldukça kurulabilir:
 - Bir [Nerd Font](https://www.nerdfonts.com/) kur ve terminalin fontunu o yap — yoksa ikonlar kutu görünür. macOS: `brew install --cask font-jetbrains-mono-nerd-font`.
 - `.config/nvim` yerine konduktan sonra ilk `nvim` açılışında plugin'ler otomatik kurulur; `lazy-lock.json` sürümleri sabitler.
 
+## Claude Code bildirimleri
+
+Claude bir turu bitirdiğinde, API hatasıyla durduğunda ya da izin beklediğinde `.claude/hooks/claude-notify.sh` tmux penceresine bell gönderir ve terminale bir masaüstü bildirimi (OSC 777) yollar. `.tmux.conf` bu bell'i yakalayıp pencere adının önüne Nerd Font zilini koyar, zil de o pencereye geçince kendiliğinden kalkar.
+
+Script `jq` kullanır; macOS'ta hazır gelir, WSL'de ayrıca kurulması gerekir:
+
+```bash
+sudo apt install jq
+mkdir -p ~/.claude/hooks && xcp ~/dotfiles/.claude/hooks/claude-notify.sh ~/.claude/hooks/
+```
+
+Ardından `~/.claude/settings.json` dosyasındaki `hooks` nesnesine şunları ekle:
+
+```json
+"Stop": [{ "hooks": [{ "type": "command", "command": "$HOME/.claude/hooks/claude-notify.sh" }] }],
+"StopFailure": [{ "hooks": [{ "type": "command", "command": "$HOME/.claude/hooks/claude-notify.sh" }] }],
+"Notification": [{ "matcher": "permission_prompt", "hooks": [{ "type": "command", "command": "$HOME/.claude/hooks/claude-notify.sh" }] }]
+```
+
+Terminal tarafında ise şunlar geçerli:
+
+- **Ghostty (macOS):** Ek ayar gerekmez. Masaüstü bildirimi yalnızca Ghostty arka plandayken çıkar ve System Settings → Notifications altında Ghostty'ye izin verilmiş olmalıdır.
+- **Windows Terminal (WSL):** Varsayılan bell her seferinde ses çalar; WSL profiline `"bellStyle": "taskbar"` eklersen ses yerine görev çubuğundaki ikon yanıp söner. Masaüstü bildirimi yalnızca Preview 1.26 ve sonrasında, profile `"compatibility.allowOSC777": true` eklendiğinde gelir. Stable sürümde bildirim gelmese de status bar'daki zil çalışır.
+- Arka plandaki pencereden bildirimin geçebilmesi için tmux 3.4 veya üstü gerekir. Daha eski sürümde yalnızca masaüstü bildirimi gelmez, zil yine görünür.
+
 ## Firefox
 
 `firefox/` — Firefox'a özgü düzeltmeler. Detaylar `firefox/README.md`'de:
