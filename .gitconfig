@@ -7,3 +7,7 @@
 	defaultBranch = main
 [rebase]
 	autoStash = true
+[url "git@ssh.bitbucket.org:"]
+	insteadOf = git@bitbucket.org:
+[url "ssh://git@ssh.bitbucket.org/"]
+	insteadOf = ssh://git@bitbucket.org/
